@@ -103,16 +103,16 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url(undefined);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >除了ajax，我们还能怎样请求数据？</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >深拷贝与浅拷贝</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
                 <p>摘要:日常开发，我们习惯用ajax与后台交互，那除了ajax，我们还能怎样请求数据？<br><a id="more"></a><br>正文:<br>日常开发，我们习惯用ajax与后台交互，那除了ajax，我们还能怎样请求数据？<br>下面是到目前为止，自己接触过得五种与后台交互，请求数据的方法<br>// 测试请求:”数组.html”,注意在http协议下运行</p>
-<h3 id="原生方法xhr"><a href="#原生方法xhr" class="headerlink" title="原生方法xhr"></a>原生方法xhr</h3><p>第一种是最基础的原生方法xhr，没什么好说的，就固定的几个步骤：new 核心头，建立连接，等待状态码和http响应…<br><img src="/2016/04/11/ajax/1.jpg" alt="原生方法xhr"></p>
-<h3 id="ajax"><a href="#ajax" class="headerlink" title="$.ajax"></a>$.ajax</h3><p>第二种是：jQuery，开发中最常用的方式，用起来很简单，前三种是简写<br><img src="/2016/04/11/ajax/2.jpg" alt="jQuery"></p>
-<h3 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h3><p>第三种是fetch方法，底层是用的Promise，注意两次then才会返回正确的结果<br><img src="/2016/04/11/ajax/3.jpg" alt="fetch方法"></p>
-<h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><p>第四种就是Promise方式了，当然用到了ajax来请求数据，这其实就是requireJS，异步加载网站公用头部以及尾部的实现方式，当然它要配合difine和require来实现<br><img src="/2016/04/11/ajax/4.jpg" alt="Promise"></p>
-<h3 id="WebSocket"><a href="#WebSocket" class="headerlink" title="WebSocket"></a>WebSocket</h3><p>最后WebSocket是ws协议，是一种客户端与服务器交互的方式，实现了客户端与服务器直接建立通道，服务器可向客户端发送数据的功能，克服了http的短板<br><img src="/2016/04/11/ajax/5.jpg" alt="WebSocket"></p>
+<h3 id="原生方法xhr"><a href="#原生方法xhr" class="headerlink" title="原生方法xhr"></a>原生方法xhr</h3><p>第一种是最基础的原生方法xhr，没什么好说的，就固定的几个步骤：new 核心头，建立连接，等待状态码和http响应…<br><img src="/2016/06/20/深拷贝与浅拷贝/ajax/1.jpg" alt="原生方法xhr"></p>
+<h3 id="ajax"><a href="#ajax" class="headerlink" title="$.ajax"></a>$.ajax</h3><p>第二种是：jQuery，开发中最常用的方式，用起来很简单，前三种是简写<br><img src="/2016/06/20/深拷贝与浅拷贝/ajax/2.jpg" alt="jQuery"></p>
+<h3 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h3><p>第三种是fetch方法，底层是用的Promise，注意两次then才会返回正确的结果<br><img src="/2016/06/20/深拷贝与浅拷贝/ajax/3.jpg" alt="fetch方法"></p>
+<h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><p>第四种就是Promise方式了，当然用到了ajax来请求数据，这其实就是requireJS，异步加载网站公用头部以及尾部的实现方式，当然它要配合difine和require来实现<br><img src="/2016/06/20/深拷贝与浅拷贝/ajax/4.jpg" alt="Promise"></p>
+<h3 id="WebSocket"><a href="#WebSocket" class="headerlink" title="WebSocket"></a>WebSocket</h3><p>最后WebSocket是ws协议，是一种客户端与服务器交互的方式，实现了客户端与服务器直接建立通道，服务器可向客户端发送数据的功能，克服了http的短板<br><img src="/2016/06/20/深拷贝与浅拷贝/ajax/5.jpg" alt="WebSocket"></p>
 
             </div>
 
@@ -175,8 +175,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://flysnails.github.io/2016/04/11/ajax/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://flysnails.github.io/2016/04/11/ajax/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://flysnails.github.io/2016/06/20/深拷贝与浅拷贝/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://flysnails.github.io/2016/06/20/深拷贝与浅拷贝/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
