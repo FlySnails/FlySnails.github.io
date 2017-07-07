@@ -102,16 +102,16 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://www.hetingfeng.top/img/banner1.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >深拷贝与浅拷贝</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://www.hetingfeng.top/img/banner4.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >前端浏览器储存</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h5 id="摘要-无论大家学习那种语言，多多少少都听过“深拷贝与浅拷贝”，那在前端JavaScript中，深拷贝与浅拷贝到底是什么？各自怎么实现？使用时各有什么优缺点？"><a href="#摘要-无论大家学习那种语言，多多少少都听过“深拷贝与浅拷贝”，那在前端JavaScript中，深拷贝与浅拷贝到底是什么？各自怎么实现？使用时各有什么优缺点？" class="headerlink" title="摘要:无论大家学习那种语言，多多少少都听过“深拷贝与浅拷贝”，那在前端JavaScript中，深拷贝与浅拷贝到底是什么？各自怎么实现？使用时各有什么优缺点？"></a>摘要:无论大家学习那种语言，多多少少都听过“深拷贝与浅拷贝”，那在前端JavaScript中，深拷贝与浅拷贝到底是什么？各自怎么实现？使用时各有什么优缺点？</h5><a id="more"></a>
-<h4 id="正文"><a href="#正文" class="headerlink" title="正文:"></a>正文:</h4><p>首先，要明确JavaScript中对象，数组、对象类型的数据是置于堆内。浅拷贝仅仅将指向该对象堆得地址进行了复制，而深拷贝会通过递归的方式，一层一层的直到将被复制对象内的元素完全进行复制。<br>废话不多说，直接上代码！<br>//为了简化代码，先约定下 n:复制生成新的对象,o:被复制对象</p>
-<h3 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h3><p>将指向该对象堆得地址进行了复制<br><img src="/2016/06/20/深拷贝与浅拷贝/1.jpg" alt="浅拷贝"></p>
-<h3 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h3><p>通过递归的方式，一层一层的直到将被复制对象内的元素完全进行复制<br><img src="/2016/06/20/深拷贝与浅拷贝/2.jpg" alt="深拷贝"></p>
-<p>当然有简单方法：有一次刷知乎，看到的。但是，此方法会使原型消失！<br><img src="/2016/06/20/深拷贝与浅拷贝/3.jpg" alt="深拷贝"></p>
+                <h5 id="摘要-前端储存主要是：sessionStorage、localStorage以及cookie"><a href="#摘要-前端储存主要是：sessionStorage、localStorage以及cookie" class="headerlink" title="摘要:前端储存主要是：sessionStorage、localStorage以及cookie"></a>摘要:前端储存主要是：sessionStorage、localStorage以及cookie</h5><a id="more"></a>
+<h4 id="正文"><a href="#正文" class="headerlink" title="正文:"></a>正文:</h4><p>//本例以存”jay”为例</p>
+<h3 id="sessionStorage"><a href="#sessionStorage" class="headerlink" title="sessionStorage"></a>sessionStorage</h3><p>主要是当前页面的储存即tab存储，其它tab不能读取，关闭当前页面后，sessionStorag立即消失<br><img src="/2016/10/11/前端储存/1.jpg" alt="前端储存"><br>效果：<br><img src="/2016/10/11/前端储存/1-1.jpg" alt="前端储存"></p>
+<h3 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h3><p>页面存储，只要不主动清除，将会永久保存<br><img src="/2016/10/11/前端储存/2.jpg" alt="前端储存"><br>效果：<br><img src="/2016/10/11/前端储存/2-1.jpg" alt="前端储存"></p>
+<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><p>想必不用多说，很多朋友最喜欢存数据的地方，但是会每次随请求头携带至服务器，无形中增加了带宽以及服务器压力<br><img src="/2016/10/11/前端储存/3.jpg" alt="前端储存"><br>效果：<br><img src="/2016/10/11/前端储存/3-1.jpg" alt="前端储存"></p>
 
             </div>
 
@@ -174,8 +174,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://flysnails.github.io/2016/06/20/深拷贝与浅拷贝/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://flysnails.github.io/2016/06/20/深拷贝与浅拷贝/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://flysnails.github.io/2016/10/11/前端储存/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://flysnails.github.io/2016/10/11/前端储存/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

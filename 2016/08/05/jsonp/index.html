@@ -102,16 +102,15 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://www.hetingfeng.top/img/banner1.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >深拷贝与浅拷贝</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://www.hetingfeng.top/img/banner3.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >JSONP与API接口的使用</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h5 id="摘要-无论大家学习那种语言，多多少少都听过“深拷贝与浅拷贝”，那在前端JavaScript中，深拷贝与浅拷贝到底是什么？各自怎么实现？使用时各有什么优缺点？"><a href="#摘要-无论大家学习那种语言，多多少少都听过“深拷贝与浅拷贝”，那在前端JavaScript中，深拷贝与浅拷贝到底是什么？各自怎么实现？使用时各有什么优缺点？" class="headerlink" title="摘要:无论大家学习那种语言，多多少少都听过“深拷贝与浅拷贝”，那在前端JavaScript中，深拷贝与浅拷贝到底是什么？各自怎么实现？使用时各有什么优缺点？"></a>摘要:无论大家学习那种语言，多多少少都听过“深拷贝与浅拷贝”，那在前端JavaScript中，深拷贝与浅拷贝到底是什么？各自怎么实现？使用时各有什么优缺点？</h5><a id="more"></a>
-<h4 id="正文"><a href="#正文" class="headerlink" title="正文:"></a>正文:</h4><p>首先，要明确JavaScript中对象，数组、对象类型的数据是置于堆内。浅拷贝仅仅将指向该对象堆得地址进行了复制，而深拷贝会通过递归的方式，一层一层的直到将被复制对象内的元素完全进行复制。<br>废话不多说，直接上代码！<br>//为了简化代码，先约定下 n:复制生成新的对象,o:被复制对象</p>
-<h3 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h3><p>将指向该对象堆得地址进行了复制<br><img src="/2016/06/20/深拷贝与浅拷贝/1.jpg" alt="浅拷贝"></p>
-<h3 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h3><p>通过递归的方式，一层一层的直到将被复制对象内的元素完全进行复制<br><img src="/2016/06/20/深拷贝与浅拷贝/2.jpg" alt="深拷贝"></p>
-<p>当然有简单方法：有一次刷知乎，看到的。但是，此方法会使原型消失！<br><img src="/2016/06/20/深拷贝与浅拷贝/3.jpg" alt="深拷贝"></p>
+                <h5 id="摘要-JSONP与API接口的使用请求数据"><a href="#摘要-JSONP与API接口的使用请求数据" class="headerlink" title="摘要:JSONP与API接口的使用请求数据"></a>摘要:JSONP与API接口的使用请求数据</h5><a id="more"></a>
+<h4 id="正文"><a href="#正文" class="headerlink" title="正文:"></a>正文:</h4><p>平常我们使用的像快递，天气等常用的查询，通过第三方网站提供的API便能轻松解决。<br>JSONP，也是解决跨域问题，请求数据的一种有效手段。</p>
+<h3 id="调用API"><a href="#调用API" class="headerlink" title="调用API"></a>调用API</h3><p>//本例以”易源数据天气api接口为”例<br>列子很简单，直接通过ajax获取，配置好“showapi_appid”和“showapi_sign”即可获取数据。<br><img src="/2016/08/05/jsonp/api/1.jpg" alt="api"><br>效果：<br><img src="/2016/08/05/jsonp/api/4.jpg" alt="api"></p>
+<h3 id="jsonp"><a href="#jsonp" class="headerlink" title="jsonp"></a>jsonp</h3><p>jsonp解决跨域请求的原理：动态创建script标签，设置src=url，在url后的callback(data),即可获取data值。<br>//本例以”百度查询”为例<br><img src="/2016/08/05/jsonp/2.jpg" alt="jsonp"><br>效果：<br><img src="/2016/08/05/jsonp/api/3.jpg" alt="api"></p>
 
             </div>
 
@@ -174,8 +173,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://flysnails.github.io/2016/06/20/深拷贝与浅拷贝/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://flysnails.github.io/2016/06/20/深拷贝与浅拷贝/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://flysnails.github.io/2016/08/05/jsonp/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://flysnails.github.io/2016/08/05/jsonp/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
