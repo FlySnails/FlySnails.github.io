@@ -107,12 +107,10 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>摘要:日常开发，我们习惯用ajax与后台交互，那除了ajax，我们还能怎样请求数据？<br><a id="more"></a><br>正文:<br>日常开发，我们习惯用ajax与后台交互，那除了ajax，我们还能怎样请求数据？<br>下面是到目前为止，自己接触过得五种与后台交互，请求数据的方法<br>// 测试请求:”数组.html”,注意在http协议下运行</p>
-<h3 id="原生方法xhr"><a href="#原生方法xhr" class="headerlink" title="原生方法xhr"></a>原生方法xhr</h3><p>第一种是最基础的原生方法xhr，没什么好说的，就固定的几个步骤：new 核心头，建立连接，等待状态码和http响应…<br><img src="/2016/06/20/深拷贝与浅拷贝/ajax/1.jpg" alt="原生方法xhr"></p>
-<h3 id="ajax"><a href="#ajax" class="headerlink" title="$.ajax"></a>$.ajax</h3><p>第二种是：jQuery，开发中最常用的方式，用起来很简单，前三种是简写<br><img src="/2016/06/20/深拷贝与浅拷贝/ajax/2.jpg" alt="jQuery"></p>
-<h3 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h3><p>第三种是fetch方法，底层是用的Promise，注意两次then才会返回正确的结果<br><img src="/2016/06/20/深拷贝与浅拷贝/ajax/3.jpg" alt="fetch方法"></p>
-<h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><p>第四种就是Promise方式了，当然用到了ajax来请求数据，这其实就是requireJS，异步加载网站公用头部以及尾部的实现方式，当然它要配合difine和require来实现<br><img src="/2016/06/20/深拷贝与浅拷贝/ajax/4.jpg" alt="Promise"></p>
-<h3 id="WebSocket"><a href="#WebSocket" class="headerlink" title="WebSocket"></a>WebSocket</h3><p>最后WebSocket是ws协议，是一种客户端与服务器交互的方式，实现了客户端与服务器直接建立通道，服务器可向客户端发送数据的功能，克服了http的短板<br><img src="/2016/06/20/深拷贝与浅拷贝/ajax/5.jpg" alt="WebSocket"></p>
+                <p>摘要:无论大家学习那种语言，多多少少都听过“深拷贝与浅拷贝”，那在前端JavaScript中，深拷贝与浅拷贝到底是什么？各自怎么实现？使用时各有什么优缺点？<br><a id="more"></a><br>正文:<br>首先，要明确JavaScript中对象，数组、对象类型的数据是置于堆内。浅拷贝仅仅将指向该对象堆得地址进行了复制，而深拷贝会通过递归的方式，一层一层的直到将被复制对象内的元素完全进行复制。<br>废话不多说，直接上代码！<br>//为了简化代码，先约定下 n:复制生成新的对象,o:被复制对象</p>
+<h3 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h3><p>将指向该对象堆得地址进行了复制<br><img src="/2016/06/20/深拷贝与浅拷贝/1.jpg" alt="浅拷贝"></p>
+<h3 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h3><p>通过递归的方式，一层一层的直到将被复制对象内的元素完全进行复制<br><img src="/2016/06/20/深拷贝与浅拷贝/2.jpg" alt="深拷贝"></p>
+<p>当然有简单方法：有一次刷知乎，看到的。但是，此方法会使原型消失！<br><img src="/2016/06/20/深拷贝与浅拷贝/3.jpg" alt="深拷贝"></p>
 
             </div>
 
