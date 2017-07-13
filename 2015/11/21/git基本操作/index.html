@@ -108,10 +108,47 @@
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
                 <h5 id="摘要-Git是一个开源的分布式版本控制系统，用于敏捷高效的处理任何项目的版本问题。与常用的版本控制工具-CVS、SVN-等不同，Git-采用了分布式版本库的方式，不必服务器端软件支持。可以说-Git-是目前世界上最先进的分布式版本控制系统。"><a href="#摘要-Git是一个开源的分布式版本控制系统，用于敏捷高效的处理任何项目的版本问题。与常用的版本控制工具-CVS、SVN-等不同，Git-采用了分布式版本库的方式，不必服务器端软件支持。可以说-Git-是目前世界上最先进的分布式版本控制系统。" class="headerlink" title="摘要:Git是一个开源的分布式版本控制系统，用于敏捷高效的处理任何项目的版本问题。与常用的版本控制工具 CVS、SVN 等不同，Git 采用了分布式版本库的方式，不必服务器端软件支持。可以说 Git 是目前世界上最先进的分布式版本控制系统。"></a>摘要:Git是一个开源的分布式版本控制系统，用于敏捷高效的处理任何项目的版本问题。与常用的版本控制工具 CVS、SVN 等不同，Git 采用了分布式版本库的方式，不必服务器端软件支持。可以说 Git 是目前世界上最先进的分布式版本控制系统。</h5><a id="more"></a>
-<h4 id="正文"><a href="#正文" class="headerlink" title="正文:"></a>正文:</h4><p>//本例以存”jay”为例</p>
-<h3 id="git工作区、暂存区、版本库"><a href="#git工作区、暂存区、版本库" class="headerlink" title="git工作区、暂存区、版本库"></a>git工作区、暂存区、版本库</h3><p>工作区：就是你在电脑里能看到的目录。<br>暂存区：英文叫 stage，或 index。一般存放在 “.git” 目录下的 index 文件（.git/index）中，所以我们把暂存区有时也叫作索引（index）。<br>版本库：工作区有一个隐藏目录 .git，这个不算工作区，而是 Git 的版本库。<br>远程仓库： github<br><img src="/2015/11/21/git基本操作/1.jpg" alt="git基本操作"></p>
+<h4 id="正文"><a href="#正文" class="headerlink" title="正文:"></a>正文:</h4><h3 id="git工作区、暂存区、版本库"><a href="#git工作区、暂存区、版本库" class="headerlink" title="git工作区、暂存区、版本库"></a>git工作区、暂存区、版本库</h3><p>工作区：就是你在电脑里能看到的目录。<br>暂存区：英文叫 stage，或 index。一般存放在 “.git” 目录下的 index 文件（.git/index）中，所以我们把暂存区有时也叫作索引（index）。<br>版本库：工作区有一个隐藏目录 .git，这个不算工作区，而是 Git 的版本库。<br>远程仓库： github<br><img src="/2015/11/21/git基本操作/2.jpg" alt="git基本操作"></p>
 <h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><p>初始化仓库： git init<br>跟踪文件：git add 文件/目录路径(.表示全部跟踪)<br>提交到版本库: git commit -m ‘info’<br>推送至远程：<img src="/2015/11/21/git基本操作/3.jpg" alt="git基本操作"></p>
-<h3 id="简单总结"><a href="#简单总结" class="headerlink" title="简单总结"></a>简单总结</h3><p><img src="/2015/11/21/git基本操作/2.jpg" alt="git基本操作"></p>
+<h3 id="简单总结"><a href="#简单总结" class="headerlink" title="简单总结"></a>简单总结</h3><p><img src="/2015/11/21/git基本操作/1.jpg" alt="git基本操作"></p>
+<h3 id="日常使用命令"><a href="#日常使用命令" class="headerlink" title="日常使用命令"></a>日常使用命令</h3><h1 id="在当前目录新建一个Git代码库"><a href="#在当前目录新建一个Git代码库" class="headerlink" title="在当前目录新建一个Git代码库"></a>在当前目录新建一个Git代码库</h1><p>$ git init</p>
+<h1 id="下载一个项目和它的整个代码历史"><a href="#下载一个项目和它的整个代码历史" class="headerlink" title="下载一个项目和它的整个代码历史"></a>下载一个项目和它的整个代码历史</h1><p>$ git clone [url]</p>
+<h1 id="显示当前的Git配置"><a href="#显示当前的Git配置" class="headerlink" title="显示当前的Git配置"></a>显示当前的Git配置</h1><p>$ git config –list</p>
+<h1 id="设置提交代码时的用户信息"><a href="#设置提交代码时的用户信息" class="headerlink" title="设置提交代码时的用户信息"></a>设置提交代码时的用户信息</h1><p>$ git config [–global] user.name “[name]”<br>$ git config [–global] user.email “[email address]”</p>
+<h1 id="添加指定文件到暂存区"><a href="#添加指定文件到暂存区" class="headerlink" title="添加指定文件到暂存区"></a>添加指定文件到暂存区</h1><p>$ git add [file1] [file2] …</p>
+<h1 id="添加指定目录到暂存区，包括子目录"><a href="#添加指定目录到暂存区，包括子目录" class="headerlink" title="添加指定目录到暂存区，包括子目录"></a>添加指定目录到暂存区，包括子目录</h1><p>$ git add [dir]</p>
+<h1 id="添加当前目录的所有文件到暂存区"><a href="#添加当前目录的所有文件到暂存区" class="headerlink" title="添加当前目录的所有文件到暂存区"></a>添加当前目录的所有文件到暂存区</h1><p>$ git add .</p>
+<h1 id="删除工作区文件，并且将这次删除放入暂存区"><a href="#删除工作区文件，并且将这次删除放入暂存区" class="headerlink" title="删除工作区文件，并且将这次删除放入暂存区"></a>删除工作区文件，并且将这次删除放入暂存区</h1><p>$ git rm [file1] [file2] …</p>
+<h1 id="提交暂存区到仓库区"><a href="#提交暂存区到仓库区" class="headerlink" title="提交暂存区到仓库区"></a>提交暂存区到仓库区</h1><p>$ git commit -m [message]</p>
+<h1 id="提交暂存区的指定文件到仓库区"><a href="#提交暂存区的指定文件到仓库区" class="headerlink" title="提交暂存区的指定文件到仓库区"></a>提交暂存区的指定文件到仓库区</h1><p>$ git commit [file1] [file2] … -m [message]</p>
+<h1 id="提交工作区自上次commit之后的变化，直接到仓库区"><a href="#提交工作区自上次commit之后的变化，直接到仓库区" class="headerlink" title="提交工作区自上次commit之后的变化，直接到仓库区"></a>提交工作区自上次commit之后的变化，直接到仓库区</h1><p>$ git commit -a</p>
+<h1 id="提交时显示所有diff信息"><a href="#提交时显示所有diff信息" class="headerlink" title="提交时显示所有diff信息"></a>提交时显示所有diff信息</h1><p>$ git commit -v</p>
+<h1 id="列出所有本地分支"><a href="#列出所有本地分支" class="headerlink" title="列出所有本地分支"></a>列出所有本地分支</h1><p>$ git branch</p>
+<h1 id="列出所有远程分支"><a href="#列出所有远程分支" class="headerlink" title="列出所有远程分支"></a>列出所有远程分支</h1><p>$ git branch -r</p>
+<h1 id="列出所有本地分支和远程分支"><a href="#列出所有本地分支和远程分支" class="headerlink" title="列出所有本地分支和远程分支"></a>列出所有本地分支和远程分支</h1><p>$ git branch -a</p>
+<h1 id="新建一个分支，但依然停留在当前分支"><a href="#新建一个分支，但依然停留在当前分支" class="headerlink" title="新建一个分支，但依然停留在当前分支"></a>新建一个分支，但依然停留在当前分支</h1><p>$ git branch [branch-name]</p>
+<h1 id="新建一个分支，并切换到该分支"><a href="#新建一个分支，并切换到该分支" class="headerlink" title="新建一个分支，并切换到该分支"></a>新建一个分支，并切换到该分支</h1><p>$ git checkout -b [branch]</p>
+<h1 id="切换到指定分支，并更新工作区"><a href="#切换到指定分支，并更新工作区" class="headerlink" title="切换到指定分支，并更新工作区"></a>切换到指定分支，并更新工作区</h1><p>$ git checkout [branch-name]</p>
+<h1 id="切换到上一个分支"><a href="#切换到上一个分支" class="headerlink" title="切换到上一个分支"></a>切换到上一个分支</h1><p>$ git checkout -</p>
+<h1 id="合并指定分支到当前分支"><a href="#合并指定分支到当前分支" class="headerlink" title="合并指定分支到当前分支"></a>合并指定分支到当前分支</h1><p>$ git merge [branch]</p>
+<h1 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h1><p>$ git branch -d [branch-name]</p>
+<h1 id="删除远程分支"><a href="#删除远程分支" class="headerlink" title="删除远程分支"></a>删除远程分支</h1><p>$ git push origin –delete [branch-name]<br>$ git branch -dr [remote/branch]</p>
+<h1 id="显示有变更的文件"><a href="#显示有变更的文件" class="headerlink" title="显示有变更的文件"></a>显示有变更的文件</h1><p>$ git status</p>
+<h1 id="显示当前分支的版本历史"><a href="#显示当前分支的版本历史" class="headerlink" title="显示当前分支的版本历史"></a>显示当前分支的版本历史</h1><p>$ git log</p>
+<h1 id="显示暂存区和工作区的差异"><a href="#显示暂存区和工作区的差异" class="headerlink" title="显示暂存区和工作区的差异"></a>显示暂存区和工作区的差异</h1><p>$ git diff</p>
+<h1 id="显示暂存区和上一个commit的差异"><a href="#显示暂存区和上一个commit的差异" class="headerlink" title="显示暂存区和上一个commit的差异"></a>显示暂存区和上一个commit的差异</h1><p>$ git diff –cached [file]</p>
+<h1 id="显示当前分支的最近几次提交"><a href="#显示当前分支的最近几次提交" class="headerlink" title="显示当前分支的最近几次提交"></a>显示当前分支的最近几次提交</h1><p>$ git reflog</p>
+<h1 id="下载远程仓库的所有变动"><a href="#下载远程仓库的所有变动" class="headerlink" title="下载远程仓库的所有变动"></a>下载远程仓库的所有变动</h1><p>$ git fetch [remote]</p>
+<h1 id="显示所有远程仓库"><a href="#显示所有远程仓库" class="headerlink" title="显示所有远程仓库"></a>显示所有远程仓库</h1><p>$ git remote -v</p>
+<h1 id="取回远程仓库的变化，并与本地分支合并"><a href="#取回远程仓库的变化，并与本地分支合并" class="headerlink" title="取回远程仓库的变化，并与本地分支合并"></a>取回远程仓库的变化，并与本地分支合并</h1><p>$ git pull [remote] [branch]</p>
+<h1 id="上传本地指定分支到远程仓库"><a href="#上传本地指定分支到远程仓库" class="headerlink" title="上传本地指定分支到远程仓库"></a>上传本地指定分支到远程仓库</h1><p>$ git push [remote] [branch]</p>
+<h1 id="恢复暂存区的指定文件到工作区"><a href="#恢复暂存区的指定文件到工作区" class="headerlink" title="恢复暂存区的指定文件到工作区"></a>恢复暂存区的指定文件到工作区</h1><p>$ git checkout [file]</p>
+<h1 id="恢复某个commit的指定文件到暂存区和工作区"><a href="#恢复某个commit的指定文件到暂存区和工作区" class="headerlink" title="恢复某个commit的指定文件到暂存区和工作区"></a>恢复某个commit的指定文件到暂存区和工作区</h1><p>$ git checkout [commit] [file]</p>
+<h1 id="恢复暂存区的所有文件到工作区"><a href="#恢复暂存区的所有文件到工作区" class="headerlink" title="恢复暂存区的所有文件到工作区"></a>恢复暂存区的所有文件到工作区</h1><p>$ git checkout .</p>
+<h1 id="重置暂存区的指定文件，与上一次commit保持一致，但工作区不变"><a href="#重置暂存区的指定文件，与上一次commit保持一致，但工作区不变" class="headerlink" title="重置暂存区的指定文件，与上一次commit保持一致，但工作区不变"></a>重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</h1><p>$ git reset [file]</p>
+<h1 id="重置暂存区与工作区，与上一次commit保持一致"><a href="#重置暂存区与工作区，与上一次commit保持一致" class="headerlink" title="重置暂存区与工作区，与上一次commit保持一致"></a>重置暂存区与工作区，与上一次commit保持一致</h1><p>$ git reset –hard</p>
+<h1 id="重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变"><a href="#重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变" class="headerlink" title="重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变"></a>重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</h1><p>$ git reset [commit]</p>
+<h1 id="重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致"><a href="#重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致" class="headerlink" title="重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致"></a>重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</h1><p>$ git reset –hard [commit]</p>
 
             </div>
 
