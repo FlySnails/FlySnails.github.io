@@ -107,18 +107,8 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h5 id="摘要-前几天刷微信公众号，看到一道题，要求大概是这样子的："><a href="#摘要-前几天刷微信公众号，看到一道题，要求大概是这样子的：" class="headerlink" title="摘要:前几天刷微信公众号，看到一道题，要求大概是这样子的："></a>摘要:前几天刷微信公众号，看到一道题，要求大概是这样子的：</h5><h6 id="数组：有n个各不相同的元素，每个元素值为-2-32-整数，封装fn（n）并打印出n为3时的效果"><a href="#数组：有n个各不相同的元素，每个元素值为-2-32-整数，封装fn（n）并打印出n为3时的效果" class="headerlink" title="数组：有n个各不相同的元素，每个元素值为[2,32]整数，封装fn（n）并打印出n为3时的效果"></a>数组：有n个各不相同的元素，每个元素值为[2,32]整数，封装fn（n）并打印出n为3时的效果</h6><h4 id="正文"><a href="#正文" class="headerlink" title="正文:"></a>正文:</h4><h6 id="首先new-一个集合，用set，如果集合内有相同的元素将添加不进去："><a href="#首先new-一个集合，用set，如果集合内有相同的元素将添加不进去：" class="headerlink" title="首先new 一个集合，用set，如果集合内有相同的元素将添加不进去："></a>首先new 一个集合，用set，如果集合内有相同的元素将添加不进去：</h6><pre><code>var set=new Set();
-</code></pre><h6 id="封装random函数用while循环，直到添加n个数进去后break，并将结果set返回："><a href="#封装random函数用while循环，直到添加n个数进去后break，并将结果set返回：" class="headerlink" title="封装random函数用while循环，直到添加n个数进去后break，并将结果set返回："></a>封装random函数用while循环，直到添加n个数进去后break，并将结果set返回：</h6><pre><code>function random(n,n1,n2){
-    while (true) {
-        var a=Math.floor(Math.random()*(n2-n1+1))+n1;                                
-        set.add(a);    
-        if(set.size===n){
-            break;
-        }                                                        
-    }
-    return set;
-}
-</code></pre><h6 id="利用闭包，返回random-n-n1-n2"><a href="#利用闭包，返回random-n-n1-n2" class="headerlink" title="利用闭包，返回random(n,n1,n2)"></a>利用闭包，返回random(n,n1,n2)</h6><h6 id="最后通过Array-from-将结果转为数组"><a href="#最后通过Array-from-将结果转为数组" class="headerlink" title="最后通过Array.from()将结果转为数组"></a>最后通过Array.from()将结果转为数组</h6><p>完整代码：<br><img src="/2016/11/05/ES6——Set集合与闭包巧解数组重复问题/1.jpg" alt="ES6——Set集合与闭包巧解数组重复问题"></p>
+                <h5 id="摘要-前几天刷微信公众号，看到一道题，要求大概是这样子的："><a href="#摘要-前几天刷微信公众号，看到一道题，要求大概是这样子的：" class="headerlink" title="摘要:前几天刷微信公众号，看到一道题，要求大概是这样子的："></a>摘要:前几天刷微信公众号，看到一道题，要求大概是这样子的：</h5><h6 id="数组：有n个各不相同的元素，每个元素值为-2-32-整数，封装fn（n）并打印出n为3时的效果"><a href="#数组：有n个各不相同的元素，每个元素值为-2-32-整数，封装fn（n）并打印出n为3时的效果" class="headerlink" title="数组：有n个各不相同的元素，每个元素值为[2,32]整数，封装fn（n）并打印出n为3时的效果"></a>数组：有n个各不相同的元素，每个元素值为[2,32]整数，封装fn（n）并打印出n为3时的效果</h6><h4 id="正文"><a href="#正文" class="headerlink" title="正文:"></a>正文:</h4><p>·首先new 一个集合，用set，如果集合内有相同的元素将添加不进去：<br>        var set=new Set();<br>·封装random函数用while循环，直到添加n个数进去后break，并将结果set返回：<br>        function random(n,n1,n2){<br>            while (true) {<br>                var a=Math.floor(Math.random()*(n2-n1+1))+n1;<br>                set.add(a);<br>                if(set.size===n){<br>                    break;<br>                }<br>            }<br>            return set;<br>        }<br>·利用闭包，返回random(n,n1,n2)<br>·最后通过Array.from()将结果转为数组</p>
+<p>完整代码：<br>    function fn(n,n1,n2){<br>        var set=new Set();//new 一个集合<br>        function random(n,n1,n2){<br>            while (true) {<br>                var a=Math.floor(Math.random()*(n2-n1+1))+n1;<br>                set.add(a);<br>                if(set.size===n){<br>                    break;<br>                }<br>            }<br>            return set;<br>        }<br>        return random(n,n1,n2)<br>    }<br>    console.log(Array.from(fn(3,2,32)))//[6,2,5]</p>
 <h3 id="当然，这个问题完全可以用数组，然后遍历数组内是否存在即将要被添加进去的元素，若不存在再添加这种方法实现！"><a href="#当然，这个问题完全可以用数组，然后遍历数组内是否存在即将要被添加进去的元素，若不存在再添加这种方法实现！" class="headerlink" title="当然，这个问题完全可以用数组，然后遍历数组内是否存在即将要被添加进去的元素，若不存在再添加这种方法实现！"></a>当然，这个问题完全可以用数组，然后遍历数组内是否存在即将要被添加进去的元素，若不存在再添加这种方法实现！</h3>
             </div>
 
